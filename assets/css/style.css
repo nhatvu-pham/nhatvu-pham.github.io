@@ -1,0 +1,189 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&family=Kalam:wght@400;700&display=swap');
+
+/* Base */
+body {
+  font-family: 'Kalam', cursive;
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #ffd1dc, #ffe4ec);
+  color: #333;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: 'Comfortaa', sans-serif; /* stylized heading */
+  letter-spacing: 1px;
+}
+
+header nav {
+  margin-top: 0.5rem;
+}
+
+header nav a {
+  margin: 0 10px;
+  color: #333;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+header nav a:hover {
+  background: #fff;
+  color: #e75480;
+}
+
+/* Main content */
+main {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Post cards */
+.post-card {
+  background: #fff;
+  margin: 0 0 1rem 0;
+  padding: 1.2rem;
+  border-radius: 14px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.post-card h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.post-card h2 a {
+  text-decoration: none;
+  color: #333;
+}
+
+.post-card h2 a:hover {
+  color: #e75480;
+}
+
+.excerpt {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: #777;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+/* Tags */
+.tags a {
+  display: inline-block;
+  margin: 0 6px 0 0;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  background: #ffe4ec;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #444;
+  font-family: 'Comfortaa', sans-serif;
+  transition: background 0.2s;
+}
+
+.tags a:hover {
+  background: #ffd1dc;
+  color: #222;
+}
+
+/* About card */
+.about-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 14px;
+  max-width: 600px;
+  margin: 1rem auto;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+}
+
+.about-card h2 {
+  margin-bottom: 1rem;
+  color: #333;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.about-icons {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  color: #e75480;
+}
+
+.about-icons i {
+  margin: 0 8px;
+}
+
+/* Tag page styling */
+.tag-page h1 {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.tag-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tag-list li {
+  background: #fff;
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.tag-list li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.tag-list li a:hover {
+  color: #e75480;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #666;
+  background: #f5f5f5;
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+  font-family: 'Comfortaa', sans-serif;
+}

@@ -1,0 +1,15 @@
+title: "My Embedded Blog"
+description: "Sharing knowledge about embedded systems and firmware"
+baseurl: "" # keep empty unless hosting in subfolder
+url: ""     # e.g. https://yourusername.github.io
+theme: null
+
+future: true   # allow future posts
+markdown: kramdown
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post

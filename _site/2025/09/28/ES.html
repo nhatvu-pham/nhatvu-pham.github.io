@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What is Embedded systems? | My Embedded Blog</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>My Embedded Blog</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="post">
+  <h1>What is Embedded systems?</h1>
+  <p class="meta"><i class="fa fa-calendar"></i> Sep 28, 2025</p>
+
+  <div class="post-content">
+    <p>In this tutorial, we’ll write a simple LED blink program.</p>
+
+<p>```c
+#include “stm32f4xx.h”</p>
+
+<p>int main(void) {
+    RCC-&gt;AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
+    GPIOA-&gt;MODER |= GPIO_MODER_MODE5_0;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>while (1) {
+    GPIOA-&gt;ODR ^= GPIO_ODR_OD5;
+    for (volatile int i = 0; i &lt; 1000000; i++);
+} }
+</code></pre></div></div>
+
+  </div>
+
+  
+  <p class="tags"><i class="fa fa-tags"></i>
+    
+      <a href="/tag/theoritical">theoritical</a>
+    
+  </p>
+  
+</article>
+
+  </main>
+
+  <footer>
+    <p>© 2025 My Embedded Blog</p>
+  </footer>
+</body>
+</html>

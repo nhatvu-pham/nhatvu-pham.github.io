@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div class="tag-page">
+  <h1>Posts tagged "{{ page.tag }}"</h1>
+  <ul class="tag-list">
+    {% for post in site.tags[page.tag] %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <p class="excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+        <p class="meta"><i class="fa fa-calendar"></i> {{ post.date | date: "%b %d, %Y" }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
