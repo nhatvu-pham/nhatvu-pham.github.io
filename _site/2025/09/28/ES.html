@@ -21,20 +21,16 @@
   <p class="meta"><i class="fa fa-calendar"></i> Sep 28, 2025</p>
 
   <div class="post-content">
-    <p>In this tutorial, we’ll write a simple LED blink program.</p>
+    <p>In this tutorial, I’ll tell you how I understand about Embedded Systems</p>
 
-<p>```c
-#include “stm32f4xx.h”</p>
+<p>They could be think of as <strong>computer</strong> systems that is <strong>embedded</strong> into another <strong>larger</strong> system <em>(Cars, washing machines, friges,…).</em>. Or in other words, it is the small “chip” that control a larger system.</p>
 
-<p>int main(void) {
-    RCC-&gt;AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
-    GPIOA-&gt;MODER |= GPIO_MODER_MODE5_0;</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>while (1) {
-    GPIOA-&gt;ODR ^= GPIO_ODR_OD5;
-    for (volatile int i = 0; i &lt; 1000000; i++);
-} }
-</code></pre></div></div>
+<p>Some characteristics of embbedded systems are:</p>
+<ul>
+  <li>Designed to perform <strong>dedicated</strong> task(s).</li>
+  <li>It required tight contrain such as low-cost, low-power, small dimension, fast response.</li>
+  <li>Reactive and <strong>real-time</strong>: continuosly reacts to changes in the system’s environment and must perform certain actions in real-time without too much delay</li>
+</ul>
 
   </div>
 
