@@ -8,7 +8,7 @@ permalink: /about/
   <h2><i class="fa fa-user"></i> About Me</h2>
   <p><strong>Name:</strong> Pham Van Nhat Vu</p>
   <p><strong>Hobbies:</strong> Playing football, listening rap, making content, drinking coffee</p>
-  <p><strong>Overview:</strong> I’m an embedded software engineer who loves building efficient firmware and sharing knowledge.</p>
+  <p><strong>Overview:</strong> I would like to utilize my natural logical thinking and problem solving skills, especially in embedded systems field to obtain achievements in finance, social position and recognition from others.</p>
 
   <div class="about-icons">
     <i class="fa fa-microchip"></i>
