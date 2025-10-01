@@ -1,9 +1,9 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&family=Kalam:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
 
 /* Base */
 body {
-  font-family: 'Kalam', cursive;
+  font-family: 'Quicksand', sans-serif;
   margin: 0;
   padding: 0;
   background: #fafafa;
@@ -24,7 +24,7 @@ header h1 {
   margin: 0;
   font-size: 2rem;
   font-weight: 600;
-  font-family: 'Comfortaa', sans-serif; /* stylized heading */
+  font-family: 'Quicksand', sans-serif; /* stylized heading */
   letter-spacing: 1px;
 }
 
@@ -40,7 +40,7 @@ header nav a {
   padding: 6px 10px;
   border-radius: 8px;
   transition: background 0.2s, color 0.2s;
-  font-family: 'Comfortaa', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 header nav a:hover {
@@ -74,7 +74,7 @@ main {
   margin: 0;
   font-size: 1.5rem;
   color: #333;
-  font-family: 'Comfortaa', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .post-card h2 a {
@@ -95,7 +95,7 @@ main {
 .meta {
   font-size: 0.85rem;
   color: #777;
-  font-family: 'Comfortaa', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 /* Tags */
@@ -108,7 +108,7 @@ main {
   border-radius: 14px;
   text-decoration: none;
   color: #444;
-  font-family: 'Comfortaa', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   transition: background 0.2s;
 }
 
@@ -131,7 +131,7 @@ main {
 .about-card h2 {
   margin-bottom: 1rem;
   color: #333;
-  font-family: 'Comfortaa', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .about-icons {
@@ -148,7 +148,7 @@ main {
 .tag-page h1 {
   text-align: center;
   margin-bottom: 1.2rem;
-  font-family: 'Comfortaa', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .tag-list {
@@ -169,7 +169,7 @@ main {
   text-decoration: none;
   font-weight: 600;
   color: #333;
-  font-family: 'Comfortaa', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .tag-list li a:hover {
@@ -185,5 +185,5 @@ footer {
   background: #f5f5f5;
   margin-top: 2rem;
   border-top: 1px solid #eee;
-  font-family: 'Comfortaa', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }

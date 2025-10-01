@@ -5,10 +5,9 @@ permalink: /about/
 ---
 
 <div class="about-card">
-  <h2><i class="fa fa-user"></i> About Me</h2>
-  <p><strong>Name:</strong> Pham Van Nhat Vu</p>
-  <p><strong>Hobbies:</strong> Playing football, listening rap, making content, drinking coffee</p>
-  <p><strong>Overview:</strong> I’m an embedded software engineer who loves building efficient firmware and sharing knowledge.</p>
+  <h2><i class="fa fa-heart" style="color:#ff69b4;"></i> Đôi điều về tớ </h2>
+
+  <p>Hi! Tớ là Vũ, tớ thích đá bóng, nghe rap, làm content, và tớ bị nghiện cafe. Tớ muốn sử dụng khả năng suy nghĩ logic và giải quyết vấn đề của mình, nhất là trong lĩnh vực embedded system để đạt được những thành tựu về tài chính, địa vị và sự công nhận của mọi người</p>
 
   <div class="about-icons">
     <i class="fa fa-microchip"></i>
