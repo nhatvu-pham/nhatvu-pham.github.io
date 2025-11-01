@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
 
 /* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
@@ -50,16 +56,16 @@ header nav a:hover {
 
 /* Main content */
 main {
-  max-width: 750px;
+  max-width: 980px;     /* tăng chút để phù hợp với max-width của bài */
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.5rem;      /* giảm padding trái-phải tổng thể */
 }
 
 /* Post cards */
 .post-card {
   background: #fff;
   margin: 0 0 1rem 0;
-  padding: 1.2rem;
+  padding: 0.9rem;      /* giảm padding để nội dung sát mép hơn */
   border-radius: 14px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.06);
   transition: transform 0.1s ease, box-shadow 0.2s ease;
