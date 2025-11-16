@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "NVWatch - Đồng hồ đa dụng"
+title: "LaziTracker Tracker cho người lười"
 date: 2025-10-11
 tags: [project]
 ---
