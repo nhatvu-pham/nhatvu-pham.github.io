@@ -96,4 +96,31 @@ tags: [project]
 ### 2.2. Chạy script config pins và hiển thị ảnh on start
 - Sử dụng system.d, thêm service:
   ```
+  sudo nano /etc/systemd/system/ili9341.service
+  ```
+- Thêm command chạy python script cho service
+  ```
+  [Unit]
+  Description=ILI9341 Display Service
+  After=multi-user.target
+
+  [Service]
+  Type=simple
+  User=debian
+  WorkingDirectory=/home/debian
+  ExecStart=/usr/bin/python3 /home/debian/spi_display.py
+  Restart=on-failure
+
+  [Install]
+  WantedBy=multi-user.target
+  ```
+- Reload daemon và enable service
+  ```
+  sudo systemctl daemon-reload
+  sudo systemctl enable ili9341.service
+  sudo systemctl start ili9341.service
+  ```
+- Check trạng thái của service
+  ```
+  sudo systemctl status ili9341.service
   ```
