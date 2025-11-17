@@ -54,8 +54,10 @@ tags: [project]
         vncserver :1
         ```
     - Trên PC, mình tải RealVNC, rồi connect vào BeagleBone theo địa chỉ \[IP vừa config:5901\]
-    
-### 1.4. Kết nối với LCD ILI9341
+
+## 2. Các bước thực hiện
+
+### 2.1. Kết nối với LCD ILI9341
 - LCD ILI9341 sử dụng SPI. Tuy nhiên, từ phiên bản Debian 12 trở đi, BBB không còn hỗ trợ SPI by default. ~~Phải config device tree để enable SPI~~
 - Thay vào đó, mình downgrade và flash version Debian 10 để nạp cho BBB.
 - Ngoài ra, cần config chức năng các chân SPI:
@@ -66,3 +68,32 @@ tags: [project]
   sudo config-pin P9_17 spi_cs   # CS0
   ```
 - Version OS này được cài đặt sẵn python3.7, không còn được hỗ trợ bởi thư viện **Adafruit_ILI9431** mainline, do đó mình phải tự build thư viện python từ source code:
+   ```
+   git clone   https://github.com/adafruit/Adafruit_Python_ILI9341.git
+  cd Adafruit_Python_ILI9341
+  sudo python3 setup.py install
+  ```
+- Hiện ảnh lên LCD
+  ```
+  import Adafruit_ILI9341 as TFT
+  import Adafruit_GPIO.SPI as SPI
+  from PIL import Image
+
+  # BBB pins (adjust to your wiring)
+  DC = "P9_15"
+  RST = "P9_12"
+  SPI_PORT = 0
+  SPI_DEVICE = 0
+
+  # Initialize display
+  disp = TFT.ILI9341(DC, rst=RST,     spi=SPI.SpiDev(SPI_PORT, SPI_DEVICE))
+  disp.begin()
+
+  # Load image
+  image = Image.open("screen.png")  #  Must be RGB
+  disp.display(image)
+  ```
+### 2.2. Chạy script config pins và hiển thị ảnh on start
+- Sử dụng system.d, thêm service:
+  ```
+  ```
