@@ -58,8 +58,8 @@ tags: [project]
 ## 2. Các bước thực hiện
 
 ### 2.1. Kết nối với LCD ILI9341
-- LCD ILI9341 sử dụng SPI. Tuy nhiên, từ phiên bản Debian 12 trở đi, BBB không còn hỗ trợ SPI by default. ~~Phải config device tree để enable SPI~~
-- Thay vào đó, mình downgrade và flash version Debian 10 để nạp cho BBB.
+- LCD ILI9341 sử dụng SPI. Tuy nhiên, từ phiên bản Debian 12 trở đi, BBB không còn hỗ trợ SPI by default. 
+- Do đó, ta cần phải config device tree để enable SPI (khá phức tạp, mình sẽ trình bày sau). Thay vào đó, mình downgrade và flash version Debian 10 để nạp cho BBB.
 - Ngoài ra, cần config chức năng các chân SPI:
   ```
   sudo config-pin P9_18 spi
@@ -125,3 +125,10 @@ tags: [project]
   ```
   sudo systemctl status ili9341.service
   ```
+
+### 2.3. Enable SPI cho Debian version 12 trở đi
+#### 2.3.1. Kiến thức Background
+- **Device tree**: Cấu trúc lưu các hướng dẫn để config hardware cho (thiết bị nào đang được kết nối, kết nối như thế nào)
+- File `.dts`: Lưu device tree thể hiện bằng code => compile thành file `.dtb`
+- **Device tree overlay**: Một lớp overlay đè lên device để thực hiện một số config nhỏ
+- Sử dụng overlay giúp ta chỉ cần maintain một device tree base và thêm các overlay khi cần thiết
