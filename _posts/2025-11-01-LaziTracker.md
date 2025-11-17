@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "LaziTracker Tracker cho người lười"
+title: "LaziTracker - Tracker cho người lười"
 date: 2025-10-11
 tags: [project]
 ---
@@ -55,34 +55,14 @@ tags: [project]
         ```
     - Trên PC, mình tải RealVNC, rồi connect vào BeagleBone theo địa chỉ \[IP vừa config:5901\]
     
-### 1.4. Cài đặt Qt để dev UI
-- Trong project này, mình dùng Qt để dev giao diện
-- Có 2 cách để dev Qt cho BeagleBone
-    1. Cài Qt và QtCreator trên BeagleBone rồi dev như bình thường
-    2. Cài Qt trên PC và cross-compile ra binary file để chạy trên BeagleBone
-- Ở đây mình dùng cách 2 vì dev Qt trên PC sẽ nhanh hơn, cụ thể
-    1. Copy các file của hệ điều hành của Beaglebone qua PC:
-        ```
-        mkdir -p ~/bbb-sysroot
-        rsync -avz --delete debian@<BeagleBone_IP>:/lib ~/bbb-sysroot/
-        rsync -avz --delete debian@<BeagleBone_IP>:/usr ~/bbb-sysroot/
-        ```
-    2. Folder ~/bbb-sysroot sẽ là sys root để cross-compile
-    3. Tải source code Qt cho ARM (kiến trúc của BeagleBone)
-        ```
-        wget https://download.qt.io/archive/qt/5.15/5.15.10/single/qt-everywhere-src-5.15.10.tar.xz
-        tar xf qt-everywhere-src-5.15.10.tar.xz
-        cd qt-everywhere-src-5.15.10
-        ```
-    4. Configure và compile (bằng make)
-        ```
-        ./configure -release -opengl es2 \
-        -device linux-beagleboard-g++ \
-        -device-option CROSS_COMPILE=/usr/bin/arm-linux-gnueabihf- \
-        -sysroot ~/bbb-sysroot \
-        -prefix /usr/local/qt5bb \
-        -nomake examples -nomake tests
-        -no-opengl
-        make -j$(nproc)
-        make install
-        ```
+### 1.4. Kết nối với LCD ILI9341
+- LCD ILI9341 sử dụng SPI. Tuy nhiên, từ phiên bản Debian 12 trở đi, BBB không còn hỗ trợ SPI by default. ~~Phải config device tree để enable SPI~~
+- Thay vào đó, mình downgrade và flash version Debian 10 để nạp cho BBB.
+- Ngoài ra, cần config chức năng các chân SPI:
+  ```
+  sudo config-pin P9_18 spi
+  sudo config-pin P9_21 spi   # MISO
+  sudo config-pin P9_22 spi_sclk   # SCLK
+  sudo config-pin P9_17 spi_cs   # CS0
+  ```
+- Version OS này được cài đặt sẵn python3.7, không còn được hỗ trợ bởi thư viện **Adafruit_ILI9431** mainline, do đó mình phải tự build thư viện python từ source code:
