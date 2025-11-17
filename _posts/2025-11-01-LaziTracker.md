@@ -69,7 +69,7 @@ tags: [project]
   ```
 - Version OS này được cài đặt sẵn python3.7, không còn được hỗ trợ bởi thư viện **Adafruit_ILI9431** mainline, do đó mình phải tự build thư viện python từ source code:
    ```
-   git clone   https://github.com/adafruit/Adafruit_Python_ILI9341.git
+  git clone   https://github.com/adafruit/Adafruit_Python_ILI9341.git
   cd Adafruit_Python_ILI9341
   sudo python3 setup.py install
   ```
@@ -93,6 +93,7 @@ tags: [project]
   image = Image.open("screen.png")  #  Must be RGB
   disp.display(image)
   ```
+  
 ### 2.2. Chạy script config pins và hiển thị ảnh on start
 - Sử dụng system.d, thêm service:
   ```
